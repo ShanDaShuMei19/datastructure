@@ -22,6 +22,7 @@ import javax.swing.JTextArea;
 
 public class JFrameMain {
 
+	
 	String filename = new String();
 	private JFrame frame;
 	private JTextField textField;
@@ -114,13 +115,19 @@ public class JFrameMain {
 //查询
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				filename = textField_1.getText();
+				String str_query = textField_1.getText();
 				if(filename.length() != 0) {
-					
+					if(str_query.length() != 0) {
+						String setTxt = MyIo.queryTxt("src/" + filename  + ".txt", str_query);
+						textArea.setText(setTxt);
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "请输入查询文字");
+					}
 				}
 				else {
-					JOptionPane.showMessageDialog(null, "请输入查询文字");
-				}
+					JOptionPane.showMessageDialog(null, "您还没有打开文件");
+				}		
 			}
 		});
 //新建		
