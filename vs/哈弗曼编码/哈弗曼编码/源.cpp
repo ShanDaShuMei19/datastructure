@@ -8,6 +8,8 @@
 
 using namespace std;
 
+//一个子节点
+
 typedef struct
 
 {
@@ -456,7 +458,8 @@ int main()
 
 {
 
-	HuffTree HT = new HTNode[2 * MVNum]; int flag = 1; char ch;
+	HuffTree HT = new HTNode[2 * MVNum]; 
+	int flag = 1; char ch;
 
 	HuffmanCode HC;
 
@@ -523,5 +526,3 @@ int main()
 	return 0;
 
 }
-议，转载请附上原文出处链接及本声明。
-原文链接：https ://blog.csdn.net/BAKA_51218/article/details/77857048

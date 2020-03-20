@@ -33,7 +33,7 @@ public class MyIo {
 	public static void saveTxt(String filename,String ss) {
 			BufferedWriter bw;
 			try {
-				bw = new BufferedWriter(new FileWriter(filename));
+				bw = new BufferedWriter(new FileWriter(filename,true));
 				bw.write(ss);
 				bw.newLine();
 			    bw.close();
