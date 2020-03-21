@@ -161,7 +161,7 @@ int Initialization(HuffTree & HT, int n)
 	return 1;
 
 }
-
+//初始化
 int Initialization_1(HuffTree & HT, int n)
 
 {

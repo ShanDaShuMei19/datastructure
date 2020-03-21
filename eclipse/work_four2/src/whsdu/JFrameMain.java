@@ -1,26 +1,21 @@
-package work_four;
+package whsdu;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
+import java.awt.Font;
 import java.awt.Toolkit;
-import javax.swing.JTextField;
-import java.awt.BorderLayout;
-import javax.swing.JTextPane;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
+
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
-import java.awt.Font;
 import javax.swing.JTextArea;
-import javax.swing.JButton;
-import java.awt.Dimension;
-import javax.swing.JComboBox;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map.Entry;
-import java.awt.event.ActionEvent;
-import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTextPane;
 
 public class JFrameMain {
 
@@ -69,7 +64,7 @@ public class JFrameMain {
 		textPane.setBounds(14, 184, 315, 271);
 		frame.getContentPane().add(textPane);
 		
-		JLabel lblNewLabel = new JLabel("文字输入区");
+		JLabel lblNewLabel = new JLabel("文字输入");
 		lblNewLabel.setFont(new Font("宋体", Font.PLAIN, 19));
 		lblNewLabel.setBounds(14, 153, 168, 18);
 		frame.getContentPane().add(lblNewLabel);
@@ -110,15 +105,15 @@ public class JFrameMain {
 		textArea.setLineWrap(true);        
 		textArea.setWrapStyleWord(true);  
 //comboBox	
-//textArea 显示区
-//textPane 输入区	
+//textArea 显示
+//textPane 输入
 //comboBox
-//初始化	
+//初始
 		btnNewButton_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//获取输入字符
 				huff_code = textPane.getText();
-				if(huff_code.length() != 0) {	//不为空
+				if(huff_code.length() != 0) {	//不为�?
 					isInitialization = true;
 					myIo.myInitialization(huff_code);
 				}
@@ -132,7 +127,7 @@ public class JFrameMain {
 		btnNewButton_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(isInitialization) {
-					MyIo.myCoding();
+					myIo.myCoding();
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "您还没有初始化！");
@@ -143,7 +138,7 @@ public class JFrameMain {
 		btnNewButton_1_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(isInitialization) {
-					MyIo.myDecoding();
+					myIo.myDecoding();
 				}
 				else {
 					JOptionPane.showMessageDialog(null, "您还没有初始化！");
